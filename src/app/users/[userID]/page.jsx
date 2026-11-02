@@ -1,8 +1,17 @@
-import React from "react";
+import LoadParam from "@/components/LoadParams";
+import { Suspense } from "react";
 
-const UsersDetailsPage = async ({ params }) => {
+const UserDetailsPage = async ({ params }) => {
   const { userID } = await params;
-  return <div>User Details Page : {userID}</div>;
+
+  return (
+    <div>
+      User Details Page :
+      <Suspense fallback={<p>Loading...</p>}>
+        <LoadParam userID={userID} />
+      </Suspense>
+    </div>
+  );
 };
 
-export default UsersDetailsPage;
+export default UserDetailsPage;

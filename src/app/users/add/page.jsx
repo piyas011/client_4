@@ -1,13 +1,11 @@
 import AddUser from "@/components/AddUser";
-import React from "react";
 
-const AddNewUserPage = () => {
+const NewUserAdded = () => {
   return (
     <div>
-      <p>Add New User Page</p>
       <AddUser />
     </div>
   );
 };
 
-export default AddNewUserPage;
+export default NewUserAdded;
